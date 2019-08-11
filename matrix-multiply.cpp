@@ -1,12 +1,17 @@
 #include <iostream.h>
 #include <conio.h>
 
+#define SIZE_MAT_ONE 3
+#define SIZE_MAT_TWO 3
+
+
+
 void multiply( int mat1[][3], int mat2[][3], int res[][3]) {
         int i, j, k;
-        for (i = 0; i < 3; i++){
-     	  for (j = 0; j < 3; j++){
+        for (i = 0; i < SIZE_MAT_ONE; i++){
+     	  for (j = 0; j < SIZE_MAT_TWO; j++){
      		  res[i][j] = 0;
-         	  for (k = 0; k < 3; k++) {
+         	  for (k = 0; k < SIZE_MAT_ONE; k++) {
        		       res[i][j] += mat1[i][k] * mat2[k][j];
                 }
             }
